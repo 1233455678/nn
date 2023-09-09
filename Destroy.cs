@@ -5,8 +5,10 @@ using UnityEngine;
 
 public class Destroy : MonoBehaviour
 {
-    private void OnCollisionEnter(Collision collision)
+    public void OnCollisionEnter(Collision collision)
     {
-        Destroy(collision.gameObject);
+        if (col.gameObject.tag == "Player"){
+        Destroy(gameObject);
+        }        
     }
 }
